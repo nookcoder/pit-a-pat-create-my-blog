@@ -1,0 +1,35 @@
+import React from 'react';
+import styles from './global-nav-bar.module.scss';
+import MenuIcon from '@mui/icons-material/Menu';
+
+const GlobalNavBar = () => {
+  return (
+    <div className={styles.container}>
+      {/*왼쪽*/}
+      <section className={styles.container_left}>
+        {/*로고*/}
+        <div className={styles.logo}>
+          <span>Hyeonuk</span>
+        </div>
+
+        {/*로고 옆 메뉴*/}
+        <div className={styles.menu}>
+          <span>Blog</span>
+        </div>
+
+        <div className={styles.menu}>
+          <span>Projects</span>
+        </div>
+      </section>
+
+      {/*오른쪽*/}
+      <section>
+        <span className={styles.menu}>
+          <MenuIcon />
+        </span>
+      </section>
+    </div>
+  );
+};
+
+export default GlobalNavBar;
