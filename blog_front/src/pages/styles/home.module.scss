@@ -1,12 +1,22 @@
-.container { height: 100%}
+.container {
+  width: 100%;
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding-top: var(--top-margin);
+  padding-left: var(--desktop-left);
+  box-sizing: border-box;
+}
 
 .content {
   height: 100vh;
 }
 
-.page1{
-  background-color: red;
+
+.welcome_container {
+
 }
+
+
 
 .page2{
   background-color: blue;

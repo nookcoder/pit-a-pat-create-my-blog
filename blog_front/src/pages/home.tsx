@@ -1,10 +1,11 @@
 import React from 'react';
-import useWindowDimensions from '../hooks/use-window-dimensions';
 import styles from './styles/home.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 import { Mousewheel, Pagination } from 'swiper';
+import Welcome from '../components/home/welcome';
 
 const Home = () => {
   return (
@@ -18,12 +19,11 @@ const Home = () => {
           clickable: true,
         }}
         modules={[Mousewheel, Pagination]}
-        className={styles.content}
+        className={`${styles.content}`}
+        speed={1000}
       >
-        <SwiperSlide>
-          Welcome to My
-          <br />
-          Website
+        <SwiperSlide className={`${styles.content}`}>
+          <Welcome />
         </SwiperSlide>
 
         <SwiperSlide>

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './global-nav-bar.module.scss';
+import styles from './styles/global-nav-bar.module.scss';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const GlobalNavBar = () => {
@@ -26,9 +26,7 @@ const GlobalNavBar = () => {
         {/*오른쪽*/}
         {/*todo : Introduction,  Profile, */}
         <section>
-          <span className={styles.menu}>
-            <MenuIcon />
-          </span>
+          <span className={styles.menu}>{/*<MenuIcon />*/}</span>
         </section>
       </div>
     </div>
