@@ -22,7 +22,9 @@ const Home = () => {
         className={`${styles.content}`}
         speed={1000}
       >
-        <SwiperSlide className={`${styles.content}`}>
+        <SwiperSlide
+          className={`${styles.content} ${styles.welcome_background}`}
+        >
           <Welcome />
         </SwiperSlide>
 

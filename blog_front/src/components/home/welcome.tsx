@@ -1,35 +1,43 @@
 import React from 'react';
 import styles from './styles/welcome.module.scss';
-import me from '../../static/img/IMG_1334.jpg';
+import { Bounce, JackInTheBox } from 'react-awesome-reveal';
 
 const Welcome = () => {
   return (
-    <div className={styles.container}>
-      {/*왼쪽 섹션*/}
-      <section className={styles.left_col}>
-        <div className={`${styles.welcome_title}`}>
-          Welcome to My
-          <br />
-          Website
-        </div>
+    <>
+      <div className={`${styles.container} ${styles.area}`}>
+        <section className={styles.title_container}>
+          <div className={`${styles.title}`}>
+            <Bounce>
+              <p>
+                Welcome to My
+                <br />
+                Website
+              </p>
+            </Bounce>
+          </div>
 
-        <div className={`${styles.intro_description}`}>
-          <span style={{ opacity: 0.5 }}>
-            안녕하세요
-            <br />
-            취미로 개발하는
-            <br />
-            개발자 김현욱입니다
-          </span>
-          <span>🧑🏻‍💻</span>
-        </div>
-      </section>
+          <div className={`${styles.intro_description}`}>
+            <JackInTheBox>
+              <span>안녕하세요👋 취미로 개발하는 개발자 김현욱입니다🧑🏻‍💻</span>
+            </JackInTheBox>
+          </div>
+        </section>
+      </div>
 
-      {/*오른쪽 섹션*/}
-      <section className={styles.image_container}>
-        <img src={me} alt="" className={styles.image} />
-      </section>
-    </div>
+      <ul className={styles.circles}>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </>
   );
 };
 
