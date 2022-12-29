@@ -6,6 +6,7 @@ const Welcome = () => {
   return (
     <>
       <div className={`${styles.container} ${styles.area}`}>
+        {/*제목*/}
         <section className={styles.title_container}>
           <div className={`${styles.title}`}>
             <Bounce>
