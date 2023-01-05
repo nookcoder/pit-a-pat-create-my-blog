@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { Mousewheel, Pagination } from 'swiper';
 import Welcome from '../components/home/welcome';
+import IntroduceMe from '../components/home/introduce-me';
 
 const Home = () => {
   return (
@@ -28,10 +29,10 @@ const Home = () => {
           <Welcome />
         </SwiperSlide>
 
-        <SwiperSlide>
-          Section2
-          <br />
-          Website
+        <SwiperSlide
+          className={`${styles.content} ${styles.introduce_me_background}`}
+        >
+          <IntroduceMe></IntroduceMe>
         </SwiperSlide>
 
         <SwiperSlide>cSection3</SwiperSlide>

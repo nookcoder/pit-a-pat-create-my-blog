@@ -20,7 +20,7 @@ const Welcome = () => {
 
           <div className={`${styles.intro_description}`}>
             <JackInTheBox>
-              <span>안녕하세요👋 취미로 개발하는 개발자 김현욱입니다🧑🏻‍💻</span>
+              <span>안녕하세요👋 취미로 개발하는 개발자 김현욱입니다🧑🏻‍💻☀️</span>
             </JackInTheBox>
           </div>
         </section>

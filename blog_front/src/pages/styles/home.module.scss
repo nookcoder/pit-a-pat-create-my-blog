@@ -12,8 +12,16 @@
   justify-content: center;
 }
 
+.align_center {
+  align-items: center;
+}
+
 .welcome_background {
   background-color: var(--main-color-3);
+}
+
+.introduce_me_background{
+  //background-color: var(--main-color-2);
 }
 
 .page2{
@@ -22,4 +30,11 @@
 
 .page3{
   background-color: green;
+}
+
+.test{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  z-index: 100000;
 }
