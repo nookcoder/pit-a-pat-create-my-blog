@@ -24,7 +24,14 @@ const IntroduceMe = () => {
               opacity: [0.5, 1],
               x: [-100, 0],
             }}
-            transition={{ ease: 'easeInOut', duration: 2 }}
+            transition={{
+              ease: 'easeInOut',
+              duration: 2,
+            }}
+            exit={{
+              opacity: [0.5],
+              x: -100,
+            }}
           >
             <div className={styles.number}>01</div>
             <div className={styles.title}>Start-up</div>
