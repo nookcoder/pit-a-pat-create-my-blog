@@ -1,36 +1,96 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './styles/introduce-me.module.scss';
-
-import { motion } from 'framer-motion';
+import { Slide } from 'react-awesome-reveal';
+import { motion, useAnimationControls } from 'framer-motion';
 import { Grid } from '@mui/material';
 
-const IntroduceMe = () => {
+type Props = {
+  isActive: any;
+};
+
+const IntroduceMe = ({ isActive }: Props) => {
+  const startUpControl = useAnimationControls();
+  const challengeControl = useAnimationControls();
+  const humanitiesControl = useAnimationControls();
+  const learningControl = useAnimationControls();
+
+  const initControl = () => {
+    startUpControl.start({
+      opacity: [0.5, 1],
+      x: [-50, 0],
+      transition: {
+        duration: 1.5,
+      },
+    });
+    challengeControl.start({
+      opacity: [0.5, 1],
+      scale: [0.5, 1],
+      transition: {
+        duration: 1.5,
+      },
+    });
+    humanitiesControl.start({
+      opacity: [0.5, 1],
+      scale: [0.5, 1],
+      transition: { duration: 1.5 },
+    });
+    learningControl.start({
+      opacity: [0.5, 1],
+      x: [100, 0],
+      transition: {
+        duration: 1.5,
+      },
+    });
+  };
+
+  useEffect(() => {
+    if (isActive) {
+      initControl();
+    }
+  }, [isActive]);
+
   return (
     <div className={styles.container}>
+      <motion.div
+        animate={{
+          scale: [0.9, 1.1, 0.9],
+        }}
+        transition={{
+          repeat: Infinity,
+          repeatType: 'loop',
+          duration: 10,
+        }}
+        style={{
+          width: '600px',
+          height: '600px',
+          position: 'fixed',
+          bottom: -300,
+          right: -300,
+          backgroundColor: '#E9e9e9',
+          borderRadius: '50%',
+          transform: 'translate(50%, 50%)',
+        }}
+      />
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 6, sm: 6, md: 6 }}
       >
         <Grid item xs={2} sm={2} md={2}>
-          <span className={styles.h1}>
-            Introduce<br></br> Me
-          </span>
+          <Slide>
+            <span className={styles.h1}>
+              Introduce<br></br> Me
+            </span>
+          </Slide>
         </Grid>
+        {/* 01 Start-up*/}
         <Grid item xs={2} sm={2} md={2}>
           <motion.div
             className={styles.item}
-            animate={{
-              opacity: [0.5, 1],
-              x: [-100, 0],
-            }}
+            animate={startUpControl}
             transition={{
               ease: 'easeInOut',
               duration: 2,
-            }}
-            exit={{
-              opacity: [0.5],
-              x: -100,
             }}
           >
             <div className={styles.number}>01</div>
@@ -45,13 +105,9 @@ const IntroduceMe = () => {
             </div>
           </motion.div>
         </Grid>
+        {/* 02 Challenge*/}
         <Grid item xs={2} sm={2} md={2}>
-          <motion.div
-            className={styles.item}
-            layout
-            animate={{ opacity: [0.5, 1], scale: [0.5, 1] }}
-            transition={{ duration: 2 }}
-          >
+          <motion.div className={styles.item} layout animate={challengeControl}>
             <div className={styles.number}>02</div>
             <div className={styles.title}>Challenge</div>
             <div>
@@ -65,12 +121,9 @@ const IntroduceMe = () => {
             </div>
           </motion.div>
         </Grid>
+        {/* 03 Humanities*/}
         <Grid item xs={2} sm={2} md={2}>
-          <motion.div
-            className={styles.item}
-            animate={{ opacity: [0.5, 1], scale: [0.5, 1] }}
-            transition={{ duration: 2 }}
-          >
+          <motion.div className={styles.item} animate={humanitiesControl}>
             <div className={styles.number}>03</div>
             <div className={styles.title}>Humanities</div>
             <div>
@@ -82,12 +135,10 @@ const IntroduceMe = () => {
             </div>
           </motion.div>
         </Grid>
+
+        {/* 04 Learning*/}
         <Grid item xs={2} sm={2} md={2}>
-          <motion.div
-            className={styles.item}
-            animate={{ opacity: [0.5, 1], x: [100, 0] }}
-            transition={{ duration: 2 }}
-          >
+          <motion.div className={styles.item} animate={learningControl}>
             <div className={styles.number}>04</div>
             <div className={styles.title}>Learning</div>
             <div>

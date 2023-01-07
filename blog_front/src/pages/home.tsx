@@ -32,7 +32,7 @@ const Home = () => {
         <SwiperSlide
           className={`${styles.content} ${styles.introduce_me_background}`}
         >
-          <IntroduceMe></IntroduceMe>
+          {({ isActive }) => <IntroduceMe isActive={isActive} />}
         </SwiperSlide>
 
         <SwiperSlide>cSection3</SwiperSlide>
