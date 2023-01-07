@@ -79,7 +79,7 @@ const IntroduceMe = ({ isActive }: Props) => {
         <Grid item xs={2} sm={2} md={2}>
           <Slide>
             <span className={styles.h1}>
-              Introduce<br></br> Me
+              About<br></br> Me
             </span>
           </Slide>
         </Grid>
