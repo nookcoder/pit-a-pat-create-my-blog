@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles/portfolio-card.module.scss';
 import { motion } from 'framer-motion';
-import { Chip } from '@mui/material';
+import { Button, Chip, styled } from '@mui/material';
 import { OverridableStringUnion } from '@mui/types';
 import { ChipPropsColorOverrides } from '@mui/material/Chip/Chip';
 
@@ -11,28 +11,42 @@ interface Props {
   skill_stacks: string[];
   skill_content: string[];
   image: string | undefined;
+  demo_url?: string | undefined;
+  github_url?: string | undefined;
 }
 
-const colors: OverridableStringUnion<
-  | 'default'
-  | 'primary'
-  | 'secondary'
-  | 'error'
-  | 'info'
-  | 'success'
-  | 'warning',
-  ChipPropsColorOverrides
->[] = [
-  'default',
-  'primary',
-  'secondary',
-  'error',
-  'info',
-  'success',
-  'warning',
-];
-
 const PortfolioCard = (props: Props) => {
+  const ButtonContained = styled(Button)({
+    marginRight: '10px',
+    backgroundColor: 'black',
+    color: 'white',
+    '&:hover': {
+      backgroundColor: 'black',
+      opacity: 0.8,
+    },
+    '&:active': {
+      backgroundColor: 'black',
+    },
+    '&:focus': {
+      backgroundColor: 'black',
+    },
+  });
+
+  const ButtonFiled = styled(Button)({
+    borderColor: 'black',
+    color: 'black',
+    '&:hover': {
+      borderColor: 'black',
+      opacity: 0.8,
+    },
+    '&:active': {
+      backgroundColor: 'white',
+    },
+    '&:focus': {
+      backgroundColor: 'white',
+    },
+  });
+
   return (
     <motion.main
       className={styles.box_container}
@@ -78,6 +92,12 @@ const PortfolioCard = (props: Props) => {
             ))}
           </div>
         </div>
+        <div>
+          <ButtonContained>Demo</ButtonContained>
+          <ButtonFiled className={styles.button_outlined} variant={'outlined'}>
+            Github
+          </ButtonFiled>
+        </div>
       </section>
 
       <div>
@@ -92,3 +112,22 @@ const PortfolioCard = (props: Props) => {
 };
 
 export default PortfolioCard;
+
+const colors: OverridableStringUnion<
+  | 'default'
+  | 'primary'
+  | 'secondary'
+  | 'error'
+  | 'info'
+  | 'success'
+  | 'warning',
+  ChipPropsColorOverrides
+>[] = [
+  'default',
+  'primary',
+  'secondary',
+  'error',
+  'info',
+  'success',
+  'warning',
+];
