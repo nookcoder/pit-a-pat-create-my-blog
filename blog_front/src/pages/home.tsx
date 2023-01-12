@@ -7,6 +7,7 @@ import 'swiper/css/effect-fade';
 import { Mousewheel, Pagination } from 'swiper';
 import Welcome from '../components/home/welcome';
 import IntroduceMe from '../components/home/introduce-me';
+import Portfoilo from '../components/home/portfolio';
 
 const Home = () => {
   return (
@@ -35,7 +36,9 @@ const Home = () => {
           {({ isActive }) => <IntroduceMe isActive={isActive} />}
         </SwiperSlide>
 
-        <SwiperSlide>cSection3</SwiperSlide>
+        <SwiperSlide className={``}>
+          <Portfoilo />
+        </SwiperSlide>
       </Swiper>
     </div>
   );
