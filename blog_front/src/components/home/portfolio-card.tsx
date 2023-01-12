@@ -16,37 +16,6 @@ interface Props {
 }
 
 const PortfolioCard = (props: Props) => {
-  const ButtonContained = styled(Button)({
-    marginRight: '10px',
-    backgroundColor: 'black',
-    color: 'white',
-    '&:hover': {
-      backgroundColor: 'black',
-      opacity: 0.8,
-    },
-    '&:active': {
-      backgroundColor: 'black',
-    },
-    '&:focus': {
-      backgroundColor: 'black',
-    },
-  });
-
-  const ButtonFiled = styled(Button)({
-    borderColor: 'black',
-    color: 'black',
-    '&:hover': {
-      borderColor: 'black',
-      opacity: 0.8,
-    },
-    '&:active': {
-      backgroundColor: 'white',
-    },
-    '&:focus': {
-      backgroundColor: 'white',
-    },
-  });
-
   return (
     <motion.main
       className={styles.box_container}
@@ -92,6 +61,8 @@ const PortfolioCard = (props: Props) => {
             ))}
           </div>
         </div>
+
+        {/*버튼*/}
         <div>
           <ButtonContained>Demo</ButtonContained>
           <ButtonFiled className={styles.button_outlined} variant={'outlined'}>
@@ -113,6 +84,7 @@ const PortfolioCard = (props: Props) => {
 
 export default PortfolioCard;
 
+// MUI 색상 변수
 const colors: OverridableStringUnion<
   | 'default'
   | 'primary'
@@ -131,3 +103,36 @@ const colors: OverridableStringUnion<
   'success',
   'warning',
 ];
+
+const ButtonContained = styled(Button)({
+  width: '90px',
+  marginRight: '10px',
+  backgroundColor: 'black',
+  color: 'white',
+  '&:hover': {
+    backgroundColor: 'black',
+    opacity: 0.8,
+  },
+  '&:active': {
+    backgroundColor: 'black',
+  },
+  '&:focus': {
+    backgroundColor: 'black',
+  },
+});
+
+const ButtonFiled = styled(Button)({
+  width: '90px',
+  borderColor: 'black',
+  color: 'black',
+  '&:hover': {
+    borderColor: 'black',
+    opacity: 0.8,
+  },
+  '&:active': {
+    backgroundColor: 'white',
+  },
+  '&:focus': {
+    backgroundColor: 'white',
+  },
+});
