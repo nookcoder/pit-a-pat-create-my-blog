@@ -8,6 +8,7 @@ import { Mousewheel, Pagination } from 'swiper';
 import Welcome from '../components/home/welcome';
 import IntroduceMe from '../components/home/introduce-me';
 import Portfoilo from '../components/home/portfolio';
+import Career from '../components/home/career';
 
 const Home = () => {
   return (
@@ -38,6 +39,10 @@ const Home = () => {
 
         <SwiperSlide className={``}>
           <Portfoilo />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Career />
         </SwiperSlide>
       </Swiper>
     </div>

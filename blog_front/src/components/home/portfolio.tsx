@@ -1,37 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import SDDS from '../../static/img/sdds_main.png';
 import styles from './styles/portfolio.module.scss';
 import { config } from 'react-spring';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import Carousel from 'react-spring-3d-carousel';
 import { motion } from 'framer-motion';
 import PortfolioCard from './portfolio-card';
+import { sdds } from './contents/Index';
+import SDDS from '../../static/img/sdds_main.png';
 
 const slides = [
   {
     key: 0,
     content: (
       <PortfolioCard
-        title={'Hello world'}
-        project_description={'hello'}
-        skill_content={['fasoidf']}
-        skill_stacks={[
-          'aws',
-          'docker',
-          'node',
-          'nestjs',
-          'nestjs',
-          'nestjs',
-          'nestjs',
-          'nestjs',
-          'nestjs',
-          'nestjs',
-          'nestjs',
-          'nestjs',
-          'nestjs',
-        ]}
-        image={SDDS}
+        title={sdds.title}
+        project_description={sdds.project_description}
+        skill_content={sdds.skill_content}
+        skill_stacks={sdds.skill_stacks}
+        image={sdds.image}
+        github_url={sdds.github_url}
       />
     ),
   },
