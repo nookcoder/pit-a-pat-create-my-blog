@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import styles from './styles/portfolio.module.scss';
 import { config } from 'react-spring';
 import Carousel from 'react-spring-3d-carousel';
-import { motion } from 'framer-motion';
 import PortfolioCard from './portfolio-card';
 import { sdds } from './contents/Index';
-import SDDS from '../../static/img/sdds_main.png';
+import Snow from './animation/snow';
 
 const slides = [
   {
@@ -76,15 +75,20 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <Carousel
-        slides={cards}
-        goToSlide={goToSlide}
-        offsetRadius={offsetRadius}
-        showNavigation={showArrows}
-        animationConfig={config.gentle}
-      />
-    </div>
+    <>
+      <Snow />
+      <div className={styles.container}>
+        <div className={styles.carousel_container}>
+          <Carousel
+            slides={cards}
+            goToSlide={goToSlide}
+            offsetRadius={offsetRadius}
+            showNavigation={showArrows}
+            animationConfig={config.gentle}
+          />
+        </div>
+      </div>
+    </>
   );
 };
 
