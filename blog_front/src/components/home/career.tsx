@@ -7,12 +7,26 @@ const Career = () => {
   const { width } = useWindowDimensions();
 
   return (
-    <div className={styles.background}>
-      <main className={`${styles.main}`}>
-        <div className={styles.title}>Experience</div>
-        <Experience width={width} />
-      </main>
-    </div>
+    <>
+      <div className={styles.background}>
+        <main className={`${styles.main}`}>
+          <div className={styles.title}>Experience</div>
+          <Experience width={width} />
+        </main>
+      </div>
+      <ul className={styles.circles}>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </>
   );
 };
 

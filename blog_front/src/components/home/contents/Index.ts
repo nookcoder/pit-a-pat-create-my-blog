@@ -11,5 +11,6 @@ export const sdds = {
   ],
   skill_stacks: ['AWS', 'Azure', 'NestJs', 'Typescript', 'TypeORM', 'MySQL'],
   image: SDDS,
+  image_url: '../../static/img/sdds_main.png',
   github_url: 'https://github.com/SejongDDS/sdds_server',
 };

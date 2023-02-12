@@ -66,7 +66,7 @@ const IntroduceMe = ({ isActive }: Props) => {
           position: 'fixed',
           bottom: -300,
           right: -300,
-          backgroundColor: '#E9e9e9',
+          backgroundColor: '#C9D0F2',
           borderRadius: '50%',
           transform: 'translate(50%, 50%)',
         }}

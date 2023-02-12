@@ -17,6 +17,7 @@ const slides = [
         skill_content={sdds.skill_content}
         skill_stacks={sdds.skill_stacks}
         image={sdds.image}
+        image_url={sdds.image_url}
         github_url={sdds.github_url}
       />
     ),
