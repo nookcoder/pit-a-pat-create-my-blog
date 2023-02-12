@@ -10,15 +10,18 @@ interface Props {
   title: string;
   project_description: string;
   skill_stacks: string[];
-  skill_content: string[];
-  image: string | undefined;
-  demo_url?: string | undefined;
-  github_url?: string | undefined;
+  image: string;
+  demo_url?: string;
+  github_url: string;
 }
 
 const PortfolioCard = (props: Props) => {
   const { width } = useWindowDimensions();
   const [isHover, setIsHover] = React.useState<boolean>(false);
+  const onClickGithubUrl = () => {
+    window.open(props.github_url);
+  };
+
   useEffect(() => {
     if (width <= 520) {
       setIsHover(true);
@@ -79,6 +82,7 @@ const PortfolioCard = (props: Props) => {
               <ButtonFiled
                 className={styles.button_outlined}
                 variant={'outlined'}
+                onClick={onClickGithubUrl}
               >
                 Github
               </ButtonFiled>

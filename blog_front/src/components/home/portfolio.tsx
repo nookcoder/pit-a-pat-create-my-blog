@@ -3,7 +3,7 @@ import styles from './styles/portfolio.module.scss';
 import { config } from 'react-spring';
 import Carousel from 'react-spring-3d-carousel';
 import PortfolioCard from './portfolio-card';
-import { sdds } from './contents/Index';
+import { sdds, pple, green, buckit } from './contents';
 import Snow from './animation/snow';
 
 const slides = [
@@ -13,7 +13,6 @@ const slides = [
       <PortfolioCard
         title={sdds.title}
         project_description={sdds.project_description}
-        skill_content={sdds.skill_content}
         skill_stacks={sdds.skill_stacks}
         image={sdds.image}
         github_url={sdds.github_url}
@@ -24,12 +23,11 @@ const slides = [
     key: 1,
     content: (
       <PortfolioCard
-        title={sdds.title}
-        project_description={sdds.project_description}
-        skill_content={sdds.skill_content}
-        skill_stacks={sdds.skill_stacks}
-        image={sdds.image}
-        github_url={sdds.github_url}
+        title={pple.title}
+        project_description={pple.project_description}
+        skill_stacks={pple.skill_stacks}
+        image={pple.image}
+        github_url={pple.github_url}
       />
     ),
   },
@@ -37,12 +35,11 @@ const slides = [
     key: 3,
     content: (
       <PortfolioCard
-        title={sdds.title}
-        project_description={sdds.project_description}
-        skill_content={sdds.skill_content}
-        skill_stacks={sdds.skill_stacks}
-        image={sdds.image}
-        github_url={sdds.github_url}
+        title={green.title}
+        project_description={green.project_description}
+        skill_stacks={green.skill_stacks}
+        image={green.image}
+        github_url={green.github_url}
       />
     ),
   },
@@ -50,12 +47,11 @@ const slides = [
     key: 4,
     content: (
       <PortfolioCard
-        title={sdds.title}
-        project_description={sdds.project_description}
-        skill_content={sdds.skill_content}
-        skill_stacks={sdds.skill_stacks}
-        image={sdds.image}
-        github_url={sdds.github_url}
+        title={buckit.title}
+        project_description={buckit.project_description}
+        skill_stacks={buckit.skill_stacks}
+        image={buckit.image}
+        github_url={buckit.github_url}
       />
     ),
   },
