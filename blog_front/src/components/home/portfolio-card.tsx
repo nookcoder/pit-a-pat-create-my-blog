@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Button, Chip, styled } from '@mui/material';
 import { OverridableStringUnion } from '@mui/types';
 import { ChipPropsColorOverrides } from '@mui/material/Chip/Chip';
+import useWindowDimensions from '../../hooks/use-window-dimensions';
 
 interface Props {
   title: string;
@@ -11,13 +12,18 @@ interface Props {
   skill_stacks: string[];
   skill_content: string[];
   image: string | undefined;
-  image_url: string | undefined;
   demo_url?: string | undefined;
   github_url?: string | undefined;
 }
 
 const PortfolioCard = (props: Props) => {
+  const { width } = useWindowDimensions();
   const [isHover, setIsHover] = React.useState<boolean>(false);
+  useEffect(() => {
+    if (width <= 520) {
+      setIsHover(true);
+    }
+  }, [width]);
 
   return (
     <div>
@@ -25,7 +31,7 @@ const PortfolioCard = (props: Props) => {
         <span>{props.title}</span>
       </div>
       <motion.main
-        className={styles.box_container}
+        className={`${styles.box_container} ${styles.box_width}`}
         whileHover={{
           scale: 1.02,
           transition: {
@@ -33,16 +39,20 @@ const PortfolioCard = (props: Props) => {
           },
         }}
         onHoverStart={() => {
-          setIsHover(true);
+          if (width > 520) {
+            setIsHover(true);
+          }
         }}
         onHoverEnd={() => {
-          setIsHover(false);
+          if (width > 520) {
+            setIsHover(false);
+          }
         }}
       >
         {/*타이틀*/}
         <img src={props.image} alt="프로젝트 이미지" className={styles.image} />
         {isHover ? (
-          <section className={styles.hover_section}>
+          <section className={`${styles.hover_section} ${styles.box_width}`}>
             {/*프로젝트설명*/}
             <div className={styles.description_box}>
               <div>{props.project_description}</div>
