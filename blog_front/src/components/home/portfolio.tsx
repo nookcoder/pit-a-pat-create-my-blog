@@ -3,7 +3,7 @@ import styles from './styles/portfolio.module.scss';
 import { config } from 'react-spring';
 import Carousel from 'react-spring-3d-carousel';
 import PortfolioCard from './portfolio-card';
-import { sdds, pple, green, buckit } from './contents';
+import { sdds, pple, green, buckit, imagine, beginlab } from './contents';
 import Snow from './animation/snow';
 
 const slides = [
@@ -32,7 +32,7 @@ const slides = [
     ),
   },
   {
-    key: 3,
+    key: 2,
     content: (
       <PortfolioCard
         title={green.title}
@@ -44,7 +44,7 @@ const slides = [
     ),
   },
   {
-    key: 4,
+    key: 3,
     content: (
       <PortfolioCard
         title={buckit.title}
@@ -52,6 +52,30 @@ const slides = [
         skill_stacks={buckit.skill_stacks}
         image={buckit.image}
         github_url={buckit.github_url}
+      />
+    ),
+  },
+  {
+    key: 4,
+    content: (
+      <PortfolioCard
+        title={imagine.title}
+        project_description={imagine.project_description}
+        skill_stacks={imagine.skill_stacks}
+        image={imagine.image}
+        github_url={imagine.github_url}
+      />
+    ),
+  },
+  {
+    key: 5,
+    content: (
+      <PortfolioCard
+        title={beginlab.title}
+        project_description={beginlab.project_description}
+        skill_stacks={beginlab.skill_stacks}
+        image={beginlab.image}
+        github_url={beginlab.github_url}
       />
     ),
   },

@@ -2,6 +2,8 @@ import SDDS from '../../../static/img/sdds_main.png';
 import PPLE from '../../../static/img/pple.png';
 import GREEN from '../../../static/img/green-new-map.png';
 import BUCKIT from '../../../static/img/buckit.png';
+import IMAGINCUP from '../../../static/img/imaginecup.png';
+import BEGINLAB from '../../../static/img/beginlab.png';
 
 export const sdds = {
   title: 'NoCoding 웹사이트 제작 및 배포 Sass',
@@ -45,4 +47,23 @@ export const buckit = {
   skill_stacks: ['React', 'AWS', 'NestJS', 'MySQL', 'TypeORM', 'Flutter'],
   image: BUCKIT,
   github_url: 'https://github.com/nookcoder/buckit_back_end',
+};
+
+export const imagine = {
+  title: '자가 우울증 치료앱 "Megical"',
+  project_description:
+    "Microsoft 에서 개최하는 개발자 대회 'ImagineCup' 에 Asia 대표로 갔던 안드로이드 앱입니다. 사용자가 데일리 질문에 답변을 달면 감정분석 결과값과 우울지수 모델을 사용하여 현재 우울증 지수를 계산합니다" +
+    '우울증 수준에 따라 미션, 게임을 제공하고 난이도, 횟수, 시간 등을 다르게 제공합니다. Azure Cognitive Service 를 사용하여 우울증 계산 모델를 설계 및 구현하고 DB 설계 및 Android 개발을 담당했습니다.',
+  skill_stacks: ['Azure', 'Java', 'MySQL', 'Cognitive Service'],
+  image: IMAGINCUP,
+  github_url: 'https://github.com/nookcoder/buckit_back_end',
+};
+
+export const beginlab = {
+  title: '취업 직무 교육 부트캠프 "비긴랩"',
+  project_description:
+    "'비긴랩'은 취업을 위한 직무 교육 부트캠프입니다. 서비스 기획 및 운영, 마케팅을 담당하고 웹페이지를 개발 및 운영했습니다. 코스는 인사 담당자, 바이오 인포매틱스, R&D 테크니션 총 3가지가 있고, Python 강사를 역임했습니다.",
+  skill_stacks: ['S3', 'CloudFront', 'React', 'Firebase'],
+  image: BEGINLAB,
+  github_url: 'https://github.com/nookcoder/begin-lab-web',
 };
